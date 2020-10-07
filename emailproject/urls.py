@@ -19,6 +19,6 @@ from demoapp.views import sendanemail
 from demoapp.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/home', home, name="home"),
+    path('home', home, name="home"),
     path('send/', sendanemail, name="email")
 ]

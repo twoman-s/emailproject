@@ -14,6 +14,7 @@ from rest_framework.response import Response
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+import json
 
 # Create your v(iews here.
 
@@ -47,5 +48,5 @@ def sendanemail(request):
         data = {"status": "success"}
         return Response(data)
     except Exception as e:
-        data = {"status": e}
+        data = {"status": "failed"}
     return Response(data)
