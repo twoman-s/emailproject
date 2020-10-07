@@ -18,6 +18,10 @@ from django.utils.html import strip_tags
 # Create your v(iews here.
 
 
+def home(request):
+    return Response({"data": "HEllo world"})
+
+
 @api_view(['POST'])
 def sendanemail(request):
     to = request.data["to"]
