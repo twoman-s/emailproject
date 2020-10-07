@@ -46,6 +46,6 @@ def sendanemail(request):
         email.send()
         data = {"status": "success"}
         return Response(data)
-    except Exception as e:
-        data = {"status": e}
+    except:
+        data = {"status": "failed"}
     return Response(data)
