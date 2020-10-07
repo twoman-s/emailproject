@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+SECURE_CONTENT_TYPE_NOSNIFF = False
 ROOT_URLCONF = 'emailproject.urls'
 
 TEMPLATES = [

@@ -16,6 +16,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 import json
 from django.views.decorators.clickjacking import xframe_options_exempt
+
 # Create your v(iews here.
 
 
