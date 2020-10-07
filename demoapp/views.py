@@ -47,4 +47,5 @@ def sendanemail(request):
     email.attach_alternative(html_content, "text/html")
     email.send()
     data = {"status": "success"}
+    print(data)
     return Response(data)
