@@ -45,10 +45,6 @@ def sendanemail(request):
         [to]
     )
     email.attach_alternative(html_content, "text/html")
-    # try:
     email.send()
     data = {"status": "success"}
     return Response(data)
-    # except Exception as e:
-    # data = {"status": "failed"}
-    # return Response(data)
