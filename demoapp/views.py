@@ -47,5 +47,5 @@ def sendanemail(request):
         data = {"status": "success"}
         return Response(data)
     except:
-        data = {"status": "failed"}
+        data = {"status": settings.EMAIL_HOST_USER}
     return Response(data)
