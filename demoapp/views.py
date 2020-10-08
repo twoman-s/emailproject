@@ -32,7 +32,7 @@ def home(request):
 def sendanemail(request):
     to = request.data["to"]
     username = request.data["username"]
-    subject = request.data["subject"]
+    subject = "Mail Enquiry"
     phone = request.data["phone"]
     content = request.data["content"]
     EMAIL_ADDRESS = settings.EMAIL_HOST_USER
