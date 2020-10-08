@@ -45,7 +45,9 @@ def sendanemail(request):
         [to]
     )
     email.attach_alternative(html_content, "text/html")
-    email.send()
-    data = {"status": "success"}
-    print(data)
-    return Response({"data": settings.EMAIL_HOST_USER})
+    try:
+        email.send()
+        data = {"status": "success"}
+        return Response({"data": settings.EMAIL_HOST_USER})
+    except:
+        return Response({"data": settings.EMAIL_HOST_PASSWORD})
