@@ -45,7 +45,7 @@ def sendanemail(request):
     msg1 = EmailMessage()
     msg1['Subject'] = 'STNLtd'
     msg1['From'] = EMAIL_ADDRESS
-    msg1['To'] = "alexsasi545@gmail.com"
+    msg1['To'] = settings.EMAIL_COMPANY
     msg1.add_alternative("""\
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
         <!-- saved from url=(0046)file:///C:/Users/91854/Downloads/mailhtml.html -->
@@ -2110,7 +2110,7 @@ def sendanemail(request):
         return Response(data)
     except:
         data = {"status": "failed"}
-        return Response({"data": EMAIL_ADDRESS})
+        return Response(data)
     # except:
     #     data = {"status": "failed"}
     #     return Response(data)
