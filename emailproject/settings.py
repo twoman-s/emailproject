@@ -160,6 +160,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env('SENDER_EMAIL')
 EMAIL_HOST_PASSWORD = env('SENDER_PASSWORD')
+EMAIL_COMPANY = env('COMPANY_MAIL')
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
