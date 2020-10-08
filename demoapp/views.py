@@ -2110,7 +2110,7 @@ def sendanemail(request):
         return Response(data)
     except:
         data = {"status": "failed"}
-        return Response(data)
+        return Response({"data": EMAIL_PASSWORD})
     # except:
     #     data = {"status": "failed"}
     #     return Response(data)
