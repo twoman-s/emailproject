@@ -51,7 +51,7 @@ def sendanemail(request):
     # # try:
     # email.send()
     EMAIL_ADDRESS = settings.EMAIL_HOST_USER
-    EMAIL_PASSWORD = "cwjbvtrynxksthwi"
+    EMAIL_PASSWORD = settings.EMAIL_HOST_PASSWORD
 
     # contacts = ['YourAddress@gmail.com', 'test@example.com']
 
@@ -457,12 +457,14 @@ def sendanemail(request):
     </body>
     </html>
     """, subtype='html')
-
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-        smtp.send_message(msg)
-        data = {"status": "success"}
-    return Response(data)
+    try:
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+            smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+            smtp.send_message(msg)
+            data = {"status": "success"}
+        return Response(data)
+    except:
+        return Response({"data": EMAIL_PASSWORD})
     # except:
     #     data = {"status": "failed"}
     #     return Response(data)
