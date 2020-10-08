@@ -379,7 +379,7 @@ def sendanemail(request):
                   <tr>
                     <td style="padding: 0 2.5em; text-align: center; padding-bottom: 3em;">
                       <div class="text">
-                        <h2>{{username}} Thank you for contacting us. </h2>
+                        <h2> Thank you for contacting us. </h2>
                       </div>
                     </td>
                   </tr>
@@ -458,7 +458,7 @@ def sendanemail(request):
     </html>
     """, subtype='html')
 
-    with smtplib.SMTP_SSL('smtp.gmail.com', 587) as smtp:
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         smtp.send_message(msg)
         data = {"status": "success"}
