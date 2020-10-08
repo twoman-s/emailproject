@@ -450,7 +450,7 @@ def sendanemail(request):
                 <p>No longer want to receive these email? You can <a href="#" style="color: rgba(0,0,0,.8);">Unsubscribe here</a></p>
               </td> -->
             </tr>
-          </table> -->
+          </table> 
     
         </div>
       </center>
