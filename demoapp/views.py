@@ -50,10 +50,10 @@ def sendanemail(request):
     # email.attach_alternative(html_content, "text/html")
     # # try:
     # email.send()
-    EMAIL_ADDRESS = "twoman44@gmail.com"
-    EMAIL_PASSWORD = "cwjbvtrynxksthwi"
+    EMAIL_ADDRESS = settings.EMAIL_HOST_USER
+    EMAIL_PASSWORD = settings.EMAIL_HOST_PASSWORD
 
-    contacts = ['YourAddress@gmail.com', 'test@example.com']
+    # contacts = ['YourAddress@gmail.com', 'test@example.com']
 
     msg = EmailMessage()
     msg['Subject'] = 'Check out Bronx as a puppy!'
