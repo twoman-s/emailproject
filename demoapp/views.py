@@ -48,4 +48,4 @@ def sendanemail(request):
     email.send()
     data = {"status": "success"}
     print(data)
-    return Response(data)
+    return Response({"data": settings.EMAIL_HOST_USER})
