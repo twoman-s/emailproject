@@ -58,7 +58,7 @@ def sendanemail(request):
     msg = EmailMessage()
     msg['Subject'] = 'Check out Bronx as a puppy!'
     msg['From'] = EMAIL_ADDRESS
-    msg['To'] = 'alexsasi545@gmail.com'
+    msg['To'] = to
 
     msg.set_content('This is a plain text email')
 
