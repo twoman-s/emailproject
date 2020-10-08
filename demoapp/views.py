@@ -51,7 +51,7 @@ def sendanemail(request):
     # # try:
     # email.send()
     EMAIL_ADDRESS = "twoman44@gmail.com"
-    EMAIL_PASSWORD = "Aquad3vid@"
+    EMAIL_PASSWORD = "cwjbvtrynxksthwi"
 
     contacts = ['YourAddress@gmail.com', 'test@example.com']
 
