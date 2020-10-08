@@ -30,8 +30,8 @@ def home(request):
 @xframe_options_exempt
 @api_view(['POST'])
 def sendanemail(request):
-    # to = request.data["to"]
-    # username = request.data["username"]
+    to = request.data["to"]
+    username = request.data["username"]
     # # send the html mail
     # html_content = render_to_string(
     #     "email_template.html", {'username': username})
@@ -379,7 +379,7 @@ def sendanemail(request):
                   <tr>
                     <td style="padding: 0 2.5em; text-align: center; padding-bottom: 3em;">
                       <div class="text">
-                        <h2> Thank you for contacting us. </h2>
+                        <h2>""" + username + """ Thank you for contacting us. </h2>
                       </div>
                     </td>
                   </tr>
